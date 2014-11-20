@@ -1,0 +1,430 @@
+\documentclass[12pt]{article}
+\usepackage[fleqn]{amsmath}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{listings}
+\lstset{
+  basicstyle=\small
+}
+\usepackage{color}
+\usepackage[utf8]{inputenc} 
+\usepackage[top=2cm, left=2.5cm]{geometry}
+\title{Thermo 1 Formelsammlung}
+\author{}
+
+\usepackage{tcolorbox}
+
+\begin{document}
+
+\maketitle
+\renewcommand{\arraystretch}{2}
+\definecolor{backblue}{HTML}{D2E2FF}
+\definecolor{borderblue}{HTML}{43587F}
+
+\section{Achtung}
+Dieses Dokument umfasst die Notizen, mit der ich für die Thermodynamik 1 Klausur gelernt habe. Es gibt keine Garantie für Vollständigkeit, oder Korrektheit. \\ \\
+Sie dürfen dieses Dokument nach Belieben verändern und weiterverbreiten.
+
+\section{Konstanten}
+
+\begin{align*}
+N_a&=6.02214*10^23\\
+R &= 8.3143 \frac{kJ}{kmol \: K}
+\end{align*}
+
+\section{Innere Energie und Enthalpie}
+
+\begin{align*}
+U &=\sum thermische \: und \: latente \: Energien \\
+H &=U+pV
+\end{align*}
+
+\section{Zustand im Nassdampfgebiet}
+\begin{align*}
+\text{Masse Wasser} &= m' \\
+\text{Masse Dampf} &= m'' \\
+x&= \frac{m''}{m'+m''} \\
+\text{Damit gilt} &\\
+z. \: B. \: u&= (1-x)u'+xu''
+\end{align*}
+
+\pagebreak
+
+\section{Ideales Gas}
+\textbf{Innere Energie nur eine Funktion der Temperatur}
+
+Für ein einatomiges, ideales Gas
+\begin{align*}
+u_m=\frac{3}{2}RT
+\end{align*}
+
+Außerdem ist der Zusammenhang zwischen $c_p$ und $R$ wichtig
+\begin{align*}
+\textbf{einatomig}: \frac{c_p}{R}=\frac{5}{2}\\
+\textbf{zweiatomig}: \frac{c_p}{R}\approx\frac{7}{2}
+\end{align*}
+
+\textbf{Enthalpie nur eine Funktion der Temperatur}
+
+\begin{align*}
+h&=u+pv \\
+pv&=RT\\
+u&=u(T)\\
+h&=u+RT=h(T)\\
+\end{align*}
+
+\begin
+{tcolorbox}[colback=backblue,colframe=borderblue,title=Important]
+Für ideale Gase gilt
+\begin{align*}
+du&=c_vdT \; \; \; &u_2-u_1=\int _{T_1} ^{T_2} c_v dT \\
+dh&=c_pdT \; \; \; &h_2-h_1=\int _{T_1} ^{T_2} c_p dT \\
+\end{align*}
+\end{tcolorbox}
+
+\textbf{Auch diese spezifischen Wärmekapazitäten sind bei einem idealen Gas reine Temperaturfunktionen}
+
+\begin{align*}
+h&=u+pv=u+RT \\
+\frac{dh}{dT}&=\frac{du}{dT}+R\\
+\rightarrow \; c_p &= c_v +R
+\end{align*}
+\begin{align*}
+\kappa&=\frac{c_p}{c_v} \\
+\frac{c_p}{R}&=\frac{\kappa}{\kappa -1}
+\end{align*}
+
+\pagebreak
+\section{Inkompressible Flüssigkeit}
+\bigskip
+\textbf{Druckänderung wirkt sich nicht auf Volumen aus}
+
+
+\begin{tcolorbox}[colback=backblue,colframe=borderblue,title=Important]
+\begin{align*}
+v &= v(T) \\
+u &= u(T) \\
+h &= u + pv = u'(T) + pv'(T) = h'(T) + v'(T)(p-p'(T))
+\end{align*}
+\textbf{Reale Flüssigkeiten nähern sich diesem Verhalten mit sinkender Temperatur immer besser an.}
+\end{tcolorbox}
+\bigskip
+\textbf{Analog zum idealen Gas kann man spez. Wärmekap. analysieren: }
+\begin{align*}
+du&=\left(\frac{\delta u}{\delta T}\right)_vdT + \left(\frac{\delta u}{\delta v}\right)_T dv\\
+v&=const \; \rightarrow \; du =c_v dT, \rightarrow u=u(T)
+\end{align*}
+\textbf{Also ist auch hier die innere Energie eine reine Temperaturfunktion}
+\\
+\begin{tcolorbox}[colback=backblue,colframe=borderblue,title=Important]
+\textbf{Außerdem sind die Wärmekapazitäten $c_p$ und $c_v$ für ideale Flüssigkeiten gleich. Die Enthalpie hängt von Temperatur und Druck ab.}
+\begin{align*}
+v&=const \\
+h&=h(T,p)\\
+\rightarrow dh&=c_p dT + vdp
+\end{align*}
+\end{tcolorbox}
+
+
+\pagebreak
+\section{Energietransfer, Bilanzgleichungen}
+
+\textbf{Arbeits- und Wärmeströme dürfen beliebig orientiert werden. Die Wahl ob Arbeit in das System hereinströmt, oder aus dem System heraus ist frei. Aber sie muss eindeutig angegeben werden und kann dann nicht mehr verändert werden.}
+
+\begin{align*}
+W_{12} &= \int _1 ^2 \vec{F} d\vec{r} \\ \\
+\text{in einem Gravitationsfeld} \\
+W_g&=mg(h_2-h_1) \\ \\
+\text{bei einer Feder} \\
+F &= k*x \\
+W_f &= \frac{1}{2}k(x_2^2 - x_1^2)\\ \\
+\text{Bei einem Kolben} \\
+F &= pA \\
+W_{12} &= \int _1 ^2 F dx \\ \\
+\end{align*}
+
+
+\subsection{Volumenänderungsarbeit}
+
+\textbf{Außerdem sehr wichtig: Volumenänderungsarbeit.
+Volumenänderungsarbeit ist reversibel.}
+\begin{tcolorbox}[colback=backblue,colframe=borderblue,title=Important]
+\begin{align*}
+&W_{12} ^V = - \int _1 ^2 p dV \\ \\
+&\text{Bei Ausdehnung wird Arbeit an die Umgebung abgegeben} \\
+&dV > 0 \rightarrow \; dW <0
+\end{align*}
+\end{tcolorbox}
+
+\textbf{Andere Arbeitsformen sind zum Beispiel elektrische Arbeit oder Wellenarbeit.}
+
+\pagebreak
+\subsection{Wärmeströme}
+\bigskip
+\textbf{Ein System heißt wärmedicht, oder adiabet, falls keine Wärme das System verlässt. Wärmetransport ist irreversibel.}
+
+\begin{align*}
+&\text{Wärmeleitung, immer von warm nach kalt} \\
+&\frac{\dot{Q}}{A}=-\lambda \frac{\delta T}{\delta x} \\  \\
+\hline \\
+&\text{Konvektion} \\
+&\dot{Q}=\alpha A (T_m - T_w) \\
+&\alpha \text{ wird individuell bestimmt}  \\
+&\left[\alpha\right]= \frac{J}{m^2 s K} \\
+&\text{$T_m$ ist die mittlere Temperatur} \\
+&\text{$T_w$ ist die Temperatur außen}\\ \\
+\hline \\
+&\text{Wärmestrahlung} \\
+&\frac{\dot{Q}}{A}= \sigma(T_1^4 - T_2^4)
+\end{align*}
+\pagebreak
+\subsection{Masseströme}
+\bigskip
+\textbf{Energie kann auch durch Masseströme transportiert werden. Das System erhält dabei kinetische, potentielle Energie, und die Enthalpie des einströmenden Stoffes.}
+
+\begin{align*}
+dE &= dE^m + dW^V\\
+&=(e_1+p_1v_1)dm\\
+&=(u_1 +p_1v_1 +e_{kin,1}+e_{pot,1})dm\\
+&=(h_1+e_{kin,1}+e_{pot,1})dm\\\\
+h&=u+pv
+\end{align*}
+
+\begin{tcolorbox}[colback=backblue,colframe=borderblue,title=Important]
+\textbf{Zur Bilanzierung muss die Strömungsarbeit der einströmenden und ausströmenden Masse betrachtet werden.}
+
+\begin{align*}
+\frac{dE}{dt}&=\dot{m_1}(e_1+p_1v_1)-\dot{m_2}(e_2+p_2v_2)\\
+&=\dot{m_1}h_1-\dot{m_2}h_2+\dot{m_1}(e_{kin,1}+e_{pot,1})-\dot{m_2}(e_{kin,2}+e_{pot,2})
+\end{align*}
+\end{tcolorbox}
+\textbf{Die Enthalpie ist nur eine Hilfsgröße, die für diesen Fall definiert wurde. Sie hat ein vollständiges Differential, und ist eine Zustandsgröße.
+\\ \\
+Zusätzlich gibt es noch die Tothalenthalpie, die Summe aus Enthalpie + kinetischer und potentieller Energie.}
+
+\begin{align*}
+H_t&=H+E_{kin}+E_{pot}=E+pV \\
+h_t&=h+e_{kin}+e_{pot}=e+pV \\ \\
+\rightarrow  \; \; \frac{dE}{dt}&=\dot{m_1}h_{t,1}-\dot{m_2}h_{t,2}
+\end{align*}
+
+\subsection{Spezifische Wärmekapazitäten}
+\bigskip
+\textbf{Die spezifische Wärmekapazität bei Betrachten von u liefert $c_v$ :}
+\begin{align*}
+&du=\left(\frac{\delta u}{\delta T}\right)_v dT + \left(\frac{\delta u}{\delta v}\right)_Tdv \\ \\
+\hline \\
+&\text{spezifische Wärmekapazitat bei V=const}\\
+&c_v=\left(\frac{\delta u}{\delta T}\right)_v \\
+&\rightarrow du=c_vdT
+\end{align*}
+\bigskip
+\textbf{Analog für die Enthalpie, allerdings diesmal mit konstantem Druck:}
+\begin{align*}
+&dh=\left(\frac{\delta h}{\delta T}\right)_p dT + \left(\frac{\delta h}{\delta v}\right)_Tdp \\ \\
+&\text{spezifische Wärmekapazitat bei\; p=const}\\
+&c_p=\left(\frac{\delta h}{\delta T}\right)_p \\
+&\rightarrow dh=c_pdT
+\end{align*}
+\pagebreak
+\section{Prozesse}
+
+\subsection{Stationär}
+\textbf{\textit{Stationär} $\rightarrow$ Masse und Gesamtenergie konstant \\
+Auch ein offenes System kann stationär sein, auch Fließprozesse können stationär sein. Für diese Klassifikation ist nur wichtig, dass $\frac{dm}{dt}=0$ und $\delta E=const$ \\ \\
+Für ein stationäres System gilt mit dem 1. Hauptsatz:}
+
+\begin{align*}
+&\frac{dE}{dt}=0=\dot{H_{t,e}}-\dot{H_{t,a}}+\dot{Q}+\dot{W} \\
+&0 = \dot{m}(h+\frac{v^2}{2}+gy)_1-\dot{m}(h+\frac{v^2}{2}+gy)+\dot{Q}+\dot{W} \\ \\
+\hline \\
+&\text{spezifisch \; auf \; Masse \; bezogen}\\  &\rightarrow \frac{de}{dt}=0=(h_1-h_2)+\frac{1}{2}(v_1^2-v_2^2)+g(y_1-y_2)+q+w
+\end{align*}
+\\\\
+\textbf{Analyse einer Drossel\\
+Was gilt für ein offenes, stationäres, adiabates System mit $\Delta e_{kin}=\Delta e_{pot} \approx 0$ ? }
+\begin{itemize}
+\item \textbf{ \textit{Offen} $\rightarrow$ Es gibt möglicherweise einen Massestrom}
+\item \textbf{ \textit{Adiabat} $\rightarrow \dot{Q}=0$}
+\item \textbf{In einem adiabaten, stationären System, in dem außerdem keine Arbeit verrichtet wird, gilt:}\begin{align*}
+&\Delta e_{kin}=\Delta e_{pot} \approx 0 \\
+&0=\dot{m}(h_1-h_2) \\
+&\rightarrow h_2=h_1
+\end{align*}
+\textbf{Also ist dieses System isenthalp}
+
+\end{itemize}
+
+\subsection{Instationär, 3.4}
+\bigskip
+\textbf{Es kann Energie aufgenommen, oder abgegeben werden.}
+\begin{align*}
+\frac{dm}{dt}&=\dot{m_e}-\dot{m_a}\\
+\frac{dE}{dt}&=\dot{m_e}h_{t,e}-\dot{m_a}h_{t,a}+\dot{W}+\dot{Q}
+\end{align*}
+
+\subsection{Isobar}
+
+\begin{tcolorbox}[colback=backblue,colframe=borderblue,title=Important]
+\begin{align*}
+&\Delta E=W_{12}+Q_{12}\\
+&E_2-E_1=W_{12}+Q_{12}\\
+&U_2-U_1=W_{12}+Q_{12}\\ \\
+&\text{Der Prozess ist isobar, also gilt} \\
+&\rightarrow \; W=-\int_1^2pdV=-p(V_2-V_1)\\ \\
+&\text{Damit kann man die Gleichung nach Q umformen} \\
+&U_2-U_1+pV_2-pV_1=H_2-H_1=Q_{12}\\ \\
+&\text{Außerdem kann man die ideale Gasgleichung verwenden:}\\
+&\frac{T_2}{T_1}=\frac{V_2}{V_1}
+\end{align*}
+\end{tcolorbox}
+\pagebreak
+\subsection{Isotherm und Reversibel}
+\begin{tcolorbox}[colback=backblue,colframe=borderblue,title=Important]
+\begin{tabular}{|c|c|}
+\hline 
+Geschlossen & Offen \\ 
+\hline 
+$W_{12}^{rev}=U_2-U_1-T(S_2-S_1)$ &  $\dot{W_{12}^{rev}}=\dot{H_2}-\dot{H_1}-T(\dot{S_2}-\dot{S_1})$\\
+$=U_2-TS_2-U_1+TS_1=A_2-A_1$ &$=\dot{H_2}-T\dot{S_2}-\dot{H_1}+T\dot{S_1}=\dot{G_2}- \dot{G_1}$\\
+Differenz der freien inneren Energie& 
+Differenz der freien Enthalpieströme \\
+\hline 
+\end{tabular} 
+
+\bigskip
+
+Vor allem die Gleichung für ein geschlossenes System ist interessant.\\
+Es gilt $U_{12}=W_{12}+Q_{12}$,\\
+ angenommen, dieser Prozess läuft reversibel ab, dann wird nur durch Q \\
+ Entropie übertragen. Und man weiß: $ds=\frac{dq}{T}$, umformen:\\
+ $S=QT$\\
+ \textbf{Damit hat man eine einfache Gleichung, um $Q$, $W$ und $U$ in Relation zu setzen, für $T=const$}
+\end{tcolorbox}
+
+\subsection{Isochor}
+\textbf{Man kann auch hier die ideale Gasgleichung verwenden:}
+\begin{align*}
+\frac{T_2}{T_1}=\frac{p_2}{p_1}
+\end{align*}
+
+\begin{tcolorbox}[colback=backblue,colframe=borderblue,title=Important]
+Gase leisten hier keine Arbeit,\\
+ $U_{12}=Q_{12}$\\
+ $Q_{12}=TS_{12}$
+\end{tcolorbox}
+
+\pagebreak
+\subsection{Isentrop}
+
+\textbf{Hier ist der Isentropenexponent wichtig, bei einem Gas gilt $\kappa =\frac{c_p}{c_v}$. Luft hat $\kappa=1.4$ \\ \\
+Es gilt $pV^\kappa=const$}
+\begin{tcolorbox}[colback=backblue,colframe=borderblue,title=Important]
+Für ein ideales Gas, das einen isentropen Prozess durchläuft, gilt:
+\begin{align*}
+\frac{T_2}{T_1}&=\left(\frac{p_2}{p_1}\right)^{1-\frac{1}{\kappa}}\\
+\frac{T_2}{T_1}&=\left(\frac{V_1}{V_2}\right)^{\kappa-1}
+\end{align*}
+\end{tcolorbox}
+
+\subsection{Kreisprozesse, 3.3.4}
+
+\textbf{Definition: \textit{Ändert ein System den Zustand so, dass es in seinen Anfangszustand zurückkehrt, hat das System einen Kreisprozess durchlaufen}}\\
+\\
+Für jede Zustandsgröße $z$ gilt $\oint dz=0$
+Damit geht auch der Umkehrschluss: Wenn das Umlaufintegral bei einem Kreisprozess verschwindet, hat man es mit einer Zustandsgröße zu tun. \\
+Volumenänderungsarbeit ist zum Beispiel keine Zustandgröße, Wärme auch nicht. Beide hängen vom Prozessverlauf ab.
+
+\subsection{Wirkungsgrade, 3.3.5}
+
+\begin{itemize}
+\item Arbeitsmaschine: thermischer Wirkungsgrad $\eta_{th}$ \\
+$\rightarrow n_{th}=\frac{W_{ab}}{Q_{zu}}$
+\item Kühlprozesse, Wärmepumpen: Leistungszahl $\epsilon$ \\
+\item Kältepumpe $\rightarrow \epsilon = \frac{Q_{zu}}{W_{zu}}$
+\item Wärmepumpe $\rightarrow \epsilon = \frac{Q_{ab}}{W_{zu}}$
+\item Thermischer Wirkungsgrad $\eta_{th}=1-\left|\frac{Q_{ab}}{Q_{zu}}\right|$
+\end{itemize}
+
+\pagebreak
+\section{Entropie}
+\begin{tcolorbox}[colback=backblue,colframe=borderblue,title=Important]
+
+\begin{align*}
+&ds=\frac{\delta q_{rev}}{T}=\frac{du + pdv}{T}=\frac{dh-vdp}{T}\\
+&\Delta S=S_e-S_a+S_Q+S_{irr}\\
+&S_{irr}=S_{prod}=S_a-S_e=ds_c-ds_r \\ \\
+ \\
+&\text{ideales Gas}\\
+&ds=c_v \; ln\left(\frac{T_2}{T_1}\right)+R\;ln\left(\frac{v_2}{v_1}\right) \\
+&ds=c_p\;ln\left(\frac{T_2}{T_1}\right)-R\;ln\left(\frac{p_2}{p_1}\right)\\
+&\text{Man verwendet die spezifische Gaskonstante für die Änderung der}\\
+&\text{spezifischen Entropie}\\
+&\text{und die allgemeine Gaskonstante für die Änderung der molaren Entropie}\\
+\\ \\
+&\text{ideale Flüssigkeit}\\
+&ds=c_{if} \; ln\left(\frac{T_2}{T_1}\right)\\ \\
+ \\
+&\text{Nassdampf}\\
+&\text{Vorsicht, es muss gezeigt werden,}\\
+&\text{dass der Prozess nur im Nassdampfgebiet verläuft}\\ \\
+&s''-s'=\frac{h''-h'}{T}\\
+\end{align*}
+\end{tcolorbox}
+
+\pagebreak
+
+\section{Verlustbehaftete Prozesse}
+
+Natürliche Prozesse laufen zwar nicht isentrop ab, häufig wird aber ein \textit{isentroper Wirkungsgrad angegeben}, $n_{st}$
+
+\begin{tcolorbox}[colback=backblue,colframe=borderblue,title=Important]
+Für ein ideales Gas, das einen adiabaten, aber nicht reibungsfreien Prozess durchläuft, gilt:\\
+1. Bei einer Turbine, Arbeit wird entzogen
+\begin{align*}
+n_{st}&=\frac{reell}{ideal}\\
+w_{12}&=h_2-h_1\\
+w_{12}^{rev}&=h_2*-h_1\\
+n_{st}&=\frac{w_{12}}{w_{12}^{rev}}=\frac{h_2-h_1}{h*-h_1}=\frac{c_pdT}{c_pdT*}
+\end{align*}
+2. Bei einem Verdicher, Arbeit wird geleistet
+\begin{align*}
+n_{st}&=\frac{ideal}{reell}\\
+n_{st}&=\frac{w_{12}^{rev}}{w_{12}}=\frac{h*-h_1}{h_2-h_1}=\frac{c_pdT*}{c_pdT}
+\end{align*}
+\end{tcolorbox}
+
+\pagebreak
+\section{Wichtige Prozesse}
+
+\subsection{Otto-Prozess}
+Läuft in einem Zylinder ab.
+\begin{itemize}
+\item $1 \rightarrow 2$ Isentrope Kompression, der Kolben wird reibungsfrei eingedrückt. Arbeit fließt in das System
+\item $2 \rightarrow 3$ Isochore Wärmezufuhr, der Kolben ist fixiert
+\item $3 \rightarrow 4$ Isentrope Expansion, der Kolben wird reibungsfrei herausgezogen. Das System leistet Arbeit
+\item $4 \rightarrow 1$ Isochore Wärmeabfuhr, der Kolben ist fixiert
+\end{itemize}
+
+\subsection{Carnot-Prozess}
+Ähnlich wie der Otto-Prozess, läuft ebenfalls in einem Zylinder ab, der allerdings aufwendig gekühlt/erwärmt wird.
+\begin{itemize}
+\item $1 \rightarrow 2$ Isentrope Kompression, reibungsfrei
+\item $2 \rightarrow 3$ Isotherme Wärmezufuhr, in einem Wärmebad
+\item $3 \rightarrow 4$ Isentrope Expansion, reibungsfrei
+\item $4 \rightarrow 1$ Isotherme Wärmeabfuhr, in einem Kältebad
+\end{itemize}
+
+
+\subsection{Rankine-Prozess}
+Typischer Prozess in einem Kraftwerk, Kreisprozess
+\begin{itemize}
+\item $1 \rightarrow 2$ Isentrope Kompression, Speisepumpe
+\item $2 \rightarrow 3$ Isobare Wärmezufuhr, Kessel
+\item $3 \rightarrow 4$ Isentrope Expansion, Turbine
+\item $4 \rightarrow 1$ Isobare Wärmeabfuhr, Kondensator
+\end{itemize}
+
+
+\end{document}

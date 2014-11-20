@@ -1,0 +1,131 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+%\usepackage{lastpage}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{listings}
+\lstset{
+  basicstyle=\small
+}
+\usepackage[top=1cm, left=2.5cm]{geometry}
+\usepackage{color, colortbl}  % farbige Tabellenzellen
+\usepackage{tabularx}
+\renewcommand{\arraystretch}{2}\newcommand{\Jahr}{2014} 
+\newcommand{\Semester}{Sommersemester}
+\newcommand{\Datum}{\today}
+\newcommand{\Semesteranzahl}{2}
+\newcommand{\Gesamtsemesterzahl}{2}
+\newcommand{\Abschluss}{Bachelor}
+\newcommand{\Studienfach}{CES}
+\newcommand{\University}{RWTH}
+\newcommand{\Nachname}{Klein}
+\newcommand{\Vorname}{Lars}
+\newcommand{\Strasse}{Friesenstraße}
+\newcommand{\Hausnummer}{11}
+\newcommand{\PLZ}{52062}
+\newcommand{\Ort}{Aachen}
+\newcommand{\Email}{lars.klein@rwth-aachen.de}
+\newcommand{\Vertrauensdozent}{Prof. Dr. Morgenstern}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{ 
+  pdfauthor   = {\Vorname~\Nachname}, 
+  pdfkeywords = {Studienstiftung; KIT; \Vorname~\Nachname}, 
+  pdftitle    = {Semesterbericht von~\Vorname~\Nachname~-~\Semester~\Jahr} 
+} 
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+%\fancyfoot[R]{Seite~\thepage~von \pageref{LastPage}}
+
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+
+\pagenumbering{arabic}
+
+\begin{document}
+
+\title{Semesterbericht über das \Semester \Jahr}
+\author{\Vorname \Nachname}
+\date{\Datum}
+\section*{Semesterbericht über das \Semester~\Jahr}
+\begin{tabularx}{\textwidth}{@{}llllX}
+Name, Vorname:   & \Nachname, \Vorname & Universität         & \University \\
+Semesteradresse: &\Strasse~\Hausnummer & Studienfach         & \Studienfach \\
+                 &\PLZ~\Ort~~~~~~~     & Semesterzahl        & \Semesteranzahl~von~\Gesamtsemesterzahl \\
+                 &                     & Geplanter Abschluss & \Abschluss \\
+                 &                     & Vertrauensdozent    & \Vertrauensdozent \\
+\end{tabularx}
+
+\begin{large}
+\subsection*{Rückblick}
+\subsubsection*{Meine Studienentscheidung}
+Dieses Semester ist mein zweites an der RWTH-Aachen, letzten Herbst habe ich mich in den Studiengang CES – computational engineering science – eingeschrieben. Nach dem Abitur war ich noch unschlüssig welche Fachrichtung am besten zu mir passen würde. In der Schule haben mir, neben den Fremdsprachen, die Naturwissenschaften und Mathematik besonders viel Spaß gemacht. Aber eine Entscheidung für ein Fach fiel mir schwer. Eine Karriere konnte ich mir am ehesten im naturwissenschaftlichen vorstellen, aber auch dadurch ist, gerade an der RWTH, noch keine wirkliche Einschränkung getroffen. Deshalb überlegte ich mir, zunächst einen allgemein angelegten Studiengang auszuprobieren, etwas ingenieurwissen- schaftliches, um mir einen Überblick über die verschiedenen Disziplinen zu verschaffen. 
+\newline
+\newline
+CES wurde auf der Webseite der RWTH als ein grundlagenorientierter Studiengang mit starkem Fokus auf dem Einsatz von computergestützten Verfahren beschrieben. Auf einem Tag der offenen Tür habe ich mich mit CES-Studenten unterhalten, die online-Darstellung wurde bekräftigt, CES sei ein eher theoretischer, auf Forschung ausgerichteter Studiengang. Bisher bin ich froh dieses Studium gewählt zu haben. Der Studienverlaufsplan schlüsselt CES in drei Komponenten auf: Mathematik, Informatik und Modellbildung. Letztes Semester hatten wir eine Doppelvorlesung Mathematik, eine zum Thema C++ und zwei Vorlesung aus dem Fachgebiet Modellbildung: Mechanik und Material- und Stoffkunde. Dieses Semester ist sehr ähnlich strukturiert. Wieder eine Doppelvorlesung Mathe, eine Vorlesung zu Algorithmik und zwei Module aus dem Bereich Modellbildung.
+\newline
+\newline
+Die Mathematik-Vorlesungen sind besonders arbeitsintensiv, man bekommt die umfangreichsten Übungsaufgaben und Testate. Deshalb verbringe ich etwa die Hälfte meiner Zeit mit Mathe, und die andere Hälfte mit Informatik, Mechanik und Thermodynamik. Diese Mischung gefällt mir sehr gut. Während in Mathematik bereits ein Gesamtkonzept spürbar ist, und Verfahren aus dem ersten Semester sinnvoll für den Stoff aus dem zweiten angewendet werden, lernt man gerade in Mechanik und Thermodynamik immer wieder neue Zusammenhänge. Dadurch entsteht Motivation, im Gesamtkonzept voran zu kommen, aber gleichzeitig auch Neugierde, was in der nächsten Vorlesung thematisiert werden wird.
+\subsection*{Noten}
+Im ersten Semester habe ich an drei Prüfungen der RWTH teilgenommen:
+\newline
+\newline
+\begin{tabular}{|c|c|}
+\hline 
+Prüfung & Note \\ 
+\hline 
+Mathematische Grundlagen & 1.3 \\ 
+\hline 
+Einführung in die Programmierung & 1.3 \\ 
+\hline 
+Material- und Stoffkunde & 1.7 \\ 
+\hline 
+\end{tabular} 
+\newline
+\bigskip
+\newline
+Außerdem habe ich ein Seminar zum Thema "Wissensbasierte Systeme" an der Fernuniversität Hagen erfolgreich abgeschlossen.
+\newline
+Dieses Semester habe ich erst eine Prüfung geschrieben: "Mathematische Grundlagen 2", die Ergebnisse sind allerdings noch nicht verfügbar.
+\newline
+\newline
+\pagebreak
+\subsection*{Meine Erfahrungen}
+\subsubsection*{Studiengemeinschaft}
+Als besonders angenehm empfinde ich die Gemeinschaft, die sich \\bereits jetzt im Semester gebildet hat. Freunde die sich für Maschinenbau entschieden haben, klagen über ein Gefühl von Anonymität in der Masse. Bei über 1000 Mitstudierenden ist es unmöglich, alle Kommilitonen zu kennen, Vorlesungen finden in riesigen, überfüllten Hörsälen statt, jedes Mal sieht man andere Gesichter. CES hingegen bietet  nur 100 Studienplätze, von denen zu Beginn des ersten Semesters etwa 80 besetzt wurden. Nach den ersten Prüfungen ist der Studiengang erheblich zusammengeschmolzen, sodass aus unserem Semester zu den Matheprüfungen diesen Sommer nur noch gut 40 Leute zugelassen waren.  Vorlesungen finden in kleinen Räumen statt, meist sind weniger als 40 Personen anwesend. Die kennt man aber alle mit Namen. Falls jemand nicht kommt, kann er sicher sein, direkt nach der Vorlesung den Stoff gemailt zu bekommen. Wenn jemand länger nicht da ist, wird sich erkundigt. Es hat sich erstaunlich schnell eine enge Gemeinschaft gebildet. Übungsaufgaben werden in Gruppen bearbeitet, Fragen und Probleme lassen sich schnell klären. Ein nahtloser Übergang von der Schule zum Studium.
+\newline
+
+\subsubsection*{Sport}
+Vor dem Studium bin ich stets mit dem Fahrrad zur Schule gefahren, das waren hin und zurück knapp anderthalb Stunden. Um meine Kondition weiterhin aufrecht zu erhalten, habe ich mich im RWTH-Fitnessstudio am Königshügel angemeldet. Ein Fahrrad im Fitnessstudio ist zwar lange nicht so abwechslungsreich wie der ehemalige Schulweg, aber auch viel ungefährlicher als der Aachener Stadtverkehr. Hin und wieder jogge ich am Lousberg und gehe in letzter Zeit regelmäßig mit meinen Kommilitonen schwimmen. Während der Schulzeit habe ich außerdem jeden Mittwoch Badminton gespielt, die Badminton-Veranstaltung der RWTH sind allerdings häufig sehr voll und Anmeldungen nicht ganz einfach. Judo habe ich ausprobiert, bin dafür aber zu ungelenk.
+
+\subsubsection*{Themen des Studiums}
+Leider vermisse ich die Fächervielfalt der Schule. Jeden Tag gab es andere Unterrichtsstunden, andere Themen, eine interessante Vielfalt von allen möglichen Informationen. Kolonialisierung in Englisch, Versaille in Geschichte und Romantik in Deutsch. Mir fehlt die Abwechslung, die dadurch geboten wurde. Ein Freund von mir hat sich für einen Lehramtsstudiengang in den Fächern Geschichte und Erdkunde entschieden, er kommt jetzt ins 4te Semester. Ich möchte zwar nicht mit ihm tauschen, aber es ist faszinierend, wie umfassend sein Allgemeinwissen mittlerweile ist. Während wir in CES mathematische und technische Kenntnisse vermittelt bekommen, stellt gerade Erdkunde ein Studium generale von Politik, Wirtschaft, Ökologie und Geologie dar. Ich möchte unbedingt vermeiden, ein "Fachidiot" zu werden. Deshalb bin ich der Studienstiftung sehr dankbar für die Angebote zu interkulturellen Diskussionen und die aufwendig organisierten Vorträge. Besonders hat mich ein Besuch in der Bilal-Moschee am Westbahnhof fasziniert. Das reiche Angebot an ausgewählten Kulturereignissen ist fantastisch.
+\newline
+
+\pagebreak
+\subsection*{Ausblick}
+\subsubsection*{Vorlesungsfreie Zeit und Prüfungen}
+Am Samstag, den 2. August fahre ich zu einem Sprachkurs nach Amboise. 
+In der achten Klasse konnten wir wählen, zwischen “Differenzierungskurs Naturwissenschaften” und Französisch. Ich habe mich für die Naturwissenschaften entschieden und diesen Entschluss seitdem immer bereut. Das Wissen aus dem Differenzierungskurs wurde im ersten Semester komplett durch “Material- und Stoffkunde” abgedeckt, tatsächlich war der Schulstoff nur ein kleiner Teil des Modulinhalts. Französisch hingegen lässt sich nicht in wenigen Wochen aufarbeiten. Schon lange war es mein Traum, diese Sprache doch noch zu lernen und ich habe auch schon angefangen, verschiedene Bücher durchzuarbeiten und Vokabeln zu trainieren. Aber der Fortschritt ist schleppend. Deshalb bin ich der Studienstiftung äußerst dankbar, dass sie diesen Sprachkurs in Frankreich ermöglicht. Die Vorfreude ist gewaltig. Amboise scheint ein wirklich malerischer Urlaubsort zu sein, umgeben von schöner Natur und mit einer hübschen Altstadt. Aber hauptsächlich hoffe ich, durch diesen Kurs und drei Wochen Aufenthalt im Ausland endlich einen Durchbruch zu schaffen.
+\newline
+\newline
+Leider liegt der Sprachkurs mitten zwischen den verschiedenen Klausuren. “Datenstrukturen und Algorithmen” musste ich verschieben, “Mechanik” schreibe ich zwei Tage nach der Rückreise. Deshalb habe ich dieses Semester auf Prüfungen an der Fernuni verzichtet und werde die Module aus meinem Informatikstudium, die ich im Sommersemester belegt habe, erst im Wintersemester abschließen. Auch da gab es durch den Sprachkurs Überschneidungen. Es wäre sicherlich möglich, die Prüfungen aus Aachen und Hagen mit dem Sprachkurs zu vereinen, aber ich möchte mich in Frankreich auch auf Französisch konzentrieren können, und nicht ständig anderes lernen müssen.
+\newline
+\newline
+\pagebreak
+\subsection*{Fazit}
+Ich genieße meine Zeit in Aachen. Die Vorlesungen sind spannend, die Themen sind interessant und dank der Studienstiftung bin ich in der Lage an einer Vielfalt von studienergänzenden Informationsveranstaltungen teilzunehmen. Wenn möglich, hoffe ich in der Vorlesungsfreien Zeit im kommenden Wintersemester einen zweiten Französischkurs zu belegen und dadurch trittfest in dieser Sprache zu werden.
+\newline
+\newline
+\\
+\Ort, \Datum\\
+\\
+\Vorname~\Nachname
+
+\end{large}
+
+\end{document}
