@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage[fleqn]{amsmath}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{listings}
+\lstset{
+  basicstyle=\small
+}
+\usepackage{color}
+\usepackage[utf8]{inputenc} 
+\usepackage[top=2cm, left=2.5cm]{geometry}
+\title{Thermo 2 Formelsammlung}
+\author{}
+
+\usepackage{tcolorbox}
+
+\begin{document}
+
+\maketitle
+\renewcommand{\arraystretch}{2}
+\definecolor{backblue}{HTML}{D2E2FF}
+\definecolor{borderblue}{HTML}{43587F}
+
+\section{Bilanzen in Strömungen Strömungen}
+\subsection{Masse}
+\begin
+{tcolorbox}[colback=backblue,colframe=borderblue,title=Massenbilanz]
+Der Massenstrom durch eine Düse, Röhre o.Ä. muss stets konstant sein.
+\begin{align*}
+\dot{m}=\rho\;A\;c = const\\
+\text{Differenzieren, dann Dividieren durch $\rho\; A\; c$}\\
+\text{Diese Gleichung nennt man ugs. Konti-Gleichung}\\
+\frac{d \rho}{\rho}+\frac{dA}{A}+\frac{dc}{c}=0
+\end{align*}
+\end{tcolorbox}
+\subsection{Impuls}
+Die Summe aller Kräfte, die auf die Masse wirken, verursachen eine Impulsänderung.
+\begin{align*}
+\sum F_p	&= ...=-Adp \\
+&\text{Achtung, diese Fläche ist Fläche am Anfang des Rohres}\\
+&\text{Dazu kommt Reibung}\\
+\sum F_r&=-\tau \;U\;dx=-dF_r\;cos\;\alpha \\
+&\text{Summe der beiden Kräfte für die Impulsbilanz}\\
+\sum F_x&=-A\;dp -\tau \; U \; dx
+\end{align*}
+Für die Impulsbilanz wird die gesamte Masse im System betrachtet und die Änderung der Geschwindigkeit im System hinzugezogen:
+\begin{align*}
+c&=c(x), x=x(t) \\
+\frac{dc}{dt}&=c\frac{dc}{dx}\\
+dm&=\left(\rho A + \frac{d(\rho A)}{2} \right)dx = \rho A dx\\
+&\text{Zusammen ergibt das die Impulsänderung}\\
+dmc\frac{dc}{dt}&=\rho \; A\; dx \; c \frac{dc}{dx}
+\end{align*}
+\begin
+{tcolorbox}[colback=backblue,colframe=borderblue,title=Impulsbilanz]
+Wenn man die Impulsbilanz integriert, kommt man auf
+\begin{align*}
+&-A(p_2-p_1)-\tau U(x_2-x_1)=\rho A \frac{1}{2}(c_2^2-c_1^2)\\
+&\text{Außerdem: Differentielle stationäre Impulsgleichung}\\
+&-\frac{dp}{dx}-\frac{dr_x}{dx}=\rho \; c \frac{dc}{dx}\\
+&\text{Ohne Reibung nennt man das die Euler-Gleichung}\\
+&-\frac{dp}{dx}=\rho c \frac{dc}{dx} \rightarrow -\Delta p=\rho \frac{\Delta c^2}{2}\\
+&\text{Die integrierte Form mit den Differenzen,}\\
+&\text{nennt man die Bernoulli-Gleichung:}\\
+&p+\frac{\rho}{2}c^2=const
+\end{align*}
+\end{tcolorbox}
+\end{document}
